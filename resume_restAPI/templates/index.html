@@ -1,0 +1,17 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resume Analyzer</title>
+</head>
+<body>
+	<h1>Resume Analyzer</h1>
+	<form method="post" action="{% url 'upload_resume' %}" enctype="multipart/form-data">
+		{% csrf_token %}
+		<label for="resume_file">Upload your resume:</label>
+		<input type="file" name="resume_file" id="resume_file">
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
